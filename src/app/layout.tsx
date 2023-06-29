@@ -2,6 +2,7 @@ import Link from "next/link";
 import "./globals.css";
 import { Atkinson_Hyperlegible } from "next/font/google";
 import { ClerkProvider, UserButton } from '@clerk/nextjs'
+import { Toaster } from "@/components/ui/toaster";
 
 const inter = Atkinson_Hyperlegible({
   subsets: ["latin"],
@@ -36,6 +37,7 @@ export default function RootLayout({
             </ul>
           </nav>
           {children}
+          <Toaster />
         </body>
       </html>
     </ClerkProvider>
