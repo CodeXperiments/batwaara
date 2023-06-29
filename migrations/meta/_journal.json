@@ -15,6 +15,13 @@
       "when": 1688035284456,
       "tag": "0001_nappy_shatterstar",
       "breakpoints": false
+    },
+    {
+      "idx": 2,
+      "version": "5",
+      "when": 1688060621602,
+      "tag": "0002_fine_blizzard",
+      "breakpoints": false
     }
   ]
 }

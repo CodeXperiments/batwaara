@@ -1,8 +1,9 @@
 import Link from "next/link";
 import "./globals.css";
 import { Atkinson_Hyperlegible } from "next/font/google";
-import { ClerkProvider, UserButton } from '@clerk/nextjs'
+import { ClerkProvider, UserButton } from "@clerk/nextjs";
 import { Toaster } from "@/components/ui/toaster";
+import Navbar from "@/components/Navbar";
 
 const inter = Atkinson_Hyperlegible({
   subsets: ["latin"],
@@ -10,7 +11,7 @@ const inter = Atkinson_Hyperlegible({
 });
 
 export const metadata = {
-  title: "Batwaara",
+  title: "Batwaara | Home",
   description: "Money splitting done right!",
 };
 
@@ -23,19 +24,7 @@ export default function RootLayout({
     <ClerkProvider>
       <html lang="en">
         <body className={`px-5 ${inter.className}`}>
-          <nav className="text-2xl py-4">
-            <ul className="flex justify-between">
-              <li>Batwaara</li>
-              <li>
-                <>
-                <UserButton afterSignOutUrl="/"/>
-                <Link className="hover:underline" href="/sign-in">
-                  Sign In
-                </Link>
-                </>
-              </li>
-            </ul>
-          </nav>
+          <Navbar/>
           {children}
           <Toaster />
         </body>
