@@ -76,3 +76,13 @@
     @apply bg-background text-foreground;
   }
 }
+body{
+  display: grid;
+  grid-template-rows: auto 1fr auto;
+  justify-content: center;
+  line-height: 1.4;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  font-synthesis: none;
+  text-rendering: optimizeLegibility;
+}

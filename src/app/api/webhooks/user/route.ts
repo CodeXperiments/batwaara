@@ -5,7 +5,7 @@ import { NextResponse } from "next/server";
 import { Webhook, WebhookRequiredHeaders } from "svix";
 
 const webhookSecret = process.env.WEBHOOK_SECRET || "";
-
+export const runtime = 'edge' 
 async function handler(request: Request) {
   const payload = await request.json();
   const headersList = headers();

@@ -1,11 +1,10 @@
-import Link from "next/link";
 import "./globals.css";
 import { Atkinson_Hyperlegible } from "next/font/google";
-import { ClerkProvider, UserButton } from "@clerk/nextjs";
-import { Toaster } from "@/components/ui/toaster";
+import { ClerkProvider } from "@clerk/nextjs";
+import { Toaster } from "@/components/ui/toast/toaster";
 import Navbar from "@/components/Navbar";
 
-const inter = Atkinson_Hyperlegible({
+const font = Atkinson_Hyperlegible({
   subsets: ["latin"],
   weight: ["400", "700"],
 });
@@ -23,9 +22,10 @@ export default function RootLayout({
   return (
     <ClerkProvider>
       <html lang="en">
-        <body className={`px-5 ${inter.className}`}>
+        <body className={`container ${font.className}`}>
           <Navbar/>
           {children}
+          <footer className="flex justify-center items-center">Batwaara 2023</footer>
           <Toaster />
         </body>
       </html>

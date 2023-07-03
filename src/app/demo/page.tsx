@@ -2,7 +2,7 @@ export const metadata = {
   title: "Batwaara | Demo",
   description: "Money splitting done right!",
 };
-
+export const runtime = 'edge' 
 export default async function Demo() {
   return (
     <main className="flex min-h-screen flex-col items-center justify-between p-24">
